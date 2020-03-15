@@ -1,0 +1,330 @@
+/* nav */
+.header {
+    position: sticky;
+    top:-13.4rem;
+    z-index: 50;
+}
+
+.nav__list {
+    background-color: var(--black-bg);
+    text-align: center;
+}
+
+.nav__logo {
+    text-align: center;
+    background-color: var(--black-bg);
+    display: block;
+}
+
+.nav__img-link {
+    display: inline;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__link {
+    color: var(--white);
+    font-size:1.4rem;
+    text-transform: uppercase;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.nav__link:hover {
+    color: var(--green-color);
+}
+
+/* home */
+.home {
+    height: 80vh;
+    position: relative;
+    background-image: url("../images/poster.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.home__content {
+    position: absolute;
+    bottom:5rem;
+    left:5rem;
+}
+
+.home__btn {
+    background-color: var(--green-color);
+    color:black;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    width:20rem;
+    border: 0;
+    padding: 2rem;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.home__btn:hover {
+    border: 1px solid black;
+}
+
+/* about */
+.about {
+    position: relative;
+    padding: 0 5rem 10rem;
+    border-bottom: 1px solid black;
+}
+
+.heading {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.heading:after {
+    content: "";
+    width: 7rem;
+    height: 0.3rem;
+    background-color: var(--green-color);
+    position: absolute;
+    top:8.5rem;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+.about__block {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.block-content {
+    width: 50%;
+    text-align: center;
+}
+
+.block-content__img {
+    width: 80%;
+    height: 100%;
+    margin:0 auto;
+}
+
+.block-content__text {
+    font-size:2rem;
+    line-height: 2.6rem;
+}
+/* team */
+
+.team {
+    position: relative;
+    background-color: var(--white-light);
+    border-bottom:1px solid black;
+}
+
+.team__block-member {
+    display: flex;
+}
+
+.member {
+    width:33.33%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 1rem 0.5rem var(--green-color);
+    margin:4rem;
+}
+
+.member__img {
+    width: 50%;
+    height: 50%;
+    margin:0 auto;
+    padding-top:2rem;
+    border-radius:50%;
+}
+
+.member__name {
+    font-size: 2.8rem;
+    padding:2rem;
+}
+
+.member__role {
+    font-size: 2rem;
+    padding:0 2rem 2rem;
+}
+
+.member__text {
+    font-size: 1.6rem;
+    padding:0 2rem 0rem;
+    line-height: 2rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.contact a {
+    font-size:2rem;
+    color:var(--green-color);
+    margin:2rem 1rem;
+}
+
+/* games */
+
+.game {
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.games-block {
+    display: flex;
+}
+
+.game-item {
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin:4rem;
+    box-shadow: 0 0 1rem 0.5rem var(--green-color);
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+.game-item__info {
+    height: 50%;
+}
+.game-item__img {
+    height: 50%;
+    width: 100%;
+    margin:0 auto;
+}
+
+.game-item__name {
+    font-size: 2.8rem;
+    padding: 2rem 2rem 4rem;
+    text-align: center;
+}
+
+.game-item__text {
+    font-size: 1.6rem;
+    padding:0 2rem 0rem;
+    line-height: 2rem;
+}
+
+.download {
+    text-align: center;
+    font-size:2rem;
+    color:var(--black-bg);
+    background-color: var(--green-color);
+    width:20rem;
+    padding:2rem;
+    margin:3rem auto 0;
+}
+
+.download:hover {
+    border: 1px solid black;
+}
+
+
+/* responsive */
+
+@media only screen and (min-width: 768.1px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header {
+        position: sticky;
+        top:0;
+        z-index:90;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .menu-button {
+        z-index:100;
+        color:var(--white);
+        background-color: var(--green-color);
+        position: fixed;
+        top:2rem;
+        right:2rem;
+        width:5rem;
+        height: 5rem;
+        font-size:3rem;
+        border-radius:50%;
+        cursor: pointer;
+        text-align: center;
+        line-height: 5rem;
+    }
+
+    .menu-input:checked ~ .nav__list {
+        display: block;
+    }
+    
+    .nav__item {
+        width: 100%;
+    }
+
+    .nav__link {
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+    .home__content {
+        bottom:2rem;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .home__btn {
+        width:15rem;
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+
+    .about {
+        padding: 0;
+    }
+
+    .about__block {
+        flex-direction: column;
+    }
+
+    .block-content {
+        height: auto;
+        width: 90%;
+    }
+
+    .block-content__img {
+        width: 100%;
+        height: 100%;
+        padding-top:3rem;
+    }
+
+    .team__block-member {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .member {
+        width: 80%;
+    }
+
+    .games-block {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .game-item {
+        width:80%;
+    }
+}
+
