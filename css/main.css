@@ -227,6 +227,12 @@
     border: 1px solid black;
 }
 
+/* contact */
+
+.contact {
+    position: relative;
+    background-color: var(--white-light);
+}
 
 /* responsive */
 
@@ -267,7 +273,7 @@
     .menu-input:checked ~ .nav__list {
         display: block;
     }
-    
+
     .nav__item {
         width: 100%;
     }
