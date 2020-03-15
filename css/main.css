@@ -349,7 +349,6 @@ textarea {
     .header {
         position: fixed;
         top:0;
-        z-index:90;
     }
 
     .nav__list {
@@ -391,7 +390,7 @@ textarea {
     }
 
     .home {
-        height: 95vh;
+        height: 100vh;
     }
     .home__content {
         bottom:2rem;

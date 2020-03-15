@@ -9,6 +9,7 @@
     <link href="css/setting.css" rel="stylesheet" type="text/css"/>
     <link href="css/all.css"  rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div id="home"></div>
@@ -30,11 +31,11 @@
             <div class="sub-nav" id="sub-nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <ul class="sub-nav__list">
-                    <li class="sub-nav__item"><a href="#home" class="sub-nav__link">Home</a></li>
-                    <li class="sub-nav__item"><a href="#aboutus" class="sub-nav__link">About Us</a></li>
-                    <li class="sub-nav__item"><a href="#team" class="sub-nav__link">Team</a></li>
-                    <li class="sub-nav__item"><a href="#game" class="sub-nav__link">Game</a></li>
-                    <li class="sub-nav__item"><a href="#contact" class="sub-nav__link">Contact</a></li>
+                    <li class="sub-nav__item"><a href="#home" class="sub-nav__link" onclick="closeNav()">Home</a></li>
+                    <li class="sub-nav__item"><a href="#aboutus" class="sub-nav__link" onclick="closeNav()">About Us</a></li>
+                    <li class="sub-nav__item"><a href="#team" class="sub-nav__link" onclick="closeNav()">Team</a></li>
+                    <li class="sub-nav__item"><a href="#game" class="sub-nav__link" onclick="closeNav()">Game</a></li>
+                    <li class="sub-nav__item"><a href="#contact" class="sub-nav__link" onclick="closeNav()">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -177,14 +178,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        function openNav() {
-          document.getElementById("sub-nav").style.height = "100%";
-        }
-        
-        function closeNav() {
-          document.getElementById("sub-nav").style.height = "0%";
-        }
-        </script>
 </body>
 </html>
