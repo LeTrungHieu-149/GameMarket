@@ -1,4 +1,9 @@
 /* nav */
+
+html {
+    scroll-behavior: smooth;
+}
+
 .header {
     position: sticky;
     top:-13.4rem;
@@ -76,7 +81,7 @@
     font-size: 3.2rem;
     text-transform: uppercase;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 6.5rem 2rem 4rem;
 }
 
 .heading:after {
@@ -85,7 +90,7 @@
     height: 0.3rem;
     background-color: var(--green-color);
     position: absolute;
-    top:8.5rem;
+    top:11rem;
     left:50%;
     transform: translate(-50%,-50%);
 
@@ -409,6 +414,7 @@ textarea {
 
     .col-30, .col-70 {
         width: 100%;
+        padding: 0.7rem;
     }
 }
 
