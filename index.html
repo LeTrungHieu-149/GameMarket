@@ -14,12 +14,11 @@
     <div id="home"></div>
     <header class="header">
         <nav class="nav">
-            <label class="menu-button" for="menu">
+            <div class="menu-button" onclick="openNav()">
                 <i class="fa fa-bars"></i>
-            </label>
-            <input type="checkbox" id="menu" style="display: none;" class="menu-input" />
+            </div>
             <div class="nav__logo">
-                <a href="index.html" class="nav__img-link"><img alt="logo" class="nav__img" src="images/logo.png" width="132" heihgt="132"></a>
+                <a href="index.html" class="nav__img-link"><img alt="logo" class="nav__img" src="images/logo.png"></a>
             </div>
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
@@ -28,6 +27,16 @@
                 <li class="nav__item"><a href="#game" class="nav__link">Game</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
+            <div class="sub-nav" id="sub-nav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul class="sub-nav__list">
+                    <li class="sub-nav__item"><a href="#home" class="sub-nav__link">Home</a></li>
+                    <li class="sub-nav__item"><a href="#aboutus" class="sub-nav__link">About Us</a></li>
+                    <li class="sub-nav__item"><a href="#team" class="sub-nav__link">Team</a></li>
+                    <li class="sub-nav__item"><a href="#game" class="sub-nav__link">Game</a></li>
+                    <li class="sub-nav__item"><a href="#contact" class="sub-nav__link">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <div class="home">
@@ -168,5 +177,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        function openNav() {
+          document.getElementById("sub-nav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("sub-nav").style.height = "0%";
+        }
+        </script>
 </body>
 </html>
