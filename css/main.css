@@ -62,9 +62,6 @@
     padding: 2rem;
     margin: 0 2rem;
     cursor: pointer;
-}
-
-.home__btn:hover {
     border: 1px solid black;
 }
 
@@ -165,7 +162,7 @@
     padding-bottom: 4rem;
 }
 
-.contact a {
+.member__contact a {
     font-size:2rem;
     color:var(--green-color);
     margin:2rem 1rem;
@@ -221,9 +218,6 @@
     width:20rem;
     padding:2rem;
     margin:3rem auto 0;
-}
-
-.download:hover {
     border: 1px solid black;
 }
 
@@ -232,7 +226,79 @@
 .contact {
     position: relative;
     background-color: var(--white-light);
+    padding-bottom: 3rem;
 }
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin:2rem auto 0;
+    box-shadow: 0 0 1rem 0.5rem var(--green-color);
+    padding:3rem;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+}
+
+.input-row:last-child {
+    align-items: flex-start;
+}
+
+.col-30 {
+    width: 30%;
+    padding: 2rem 0;
+}
+
+.col-70 {
+    width: 70%;
+    padding: 1rem 0;
+}
+.label-text {
+    font-size:1.6rem;
+}
+
+input[type="text"], input[type="email"], input[type="tel"],textarea {
+    width: 100%;
+    padding:1rem;
+    border-radius: 0.5rem;
+    border: .5px solid var(--black);
+}
+
+textarea {
+    width: 100%;
+}
+
+.input-form input:focus, textarea:focus {
+    background-color: lightblue;
+    border:1px;
+}
+/* footer */
+.footer {
+    text-align: center;
+    padding-top:4rem;
+    border-top: 1px solid var(--black);
+}
+.author-name {
+    font-size: 1.6rem;
+}
+.submit-button {
+    background-color: var(--green-color);
+    color:black;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    width:20rem;
+    border: 0;
+    padding: 2rem;
+    margin-top:4rem;
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translate(-50%);
+    border: 1px solid black;
+}
+
 
 /* responsive */
 
@@ -331,6 +397,18 @@
 
     .game-item {
         width:80%;
+    }
+
+    .input-form{
+        width: 80%;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .col-30, .col-70 {
+        width: 100%;
     }
 }
 
