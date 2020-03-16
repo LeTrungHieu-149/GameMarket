@@ -227,6 +227,7 @@ body {
 
 .game {
     position: relative;
+    background-color: var(--white);
 }
 
 .games-block {
@@ -414,14 +415,6 @@ textarea {
         display: block;
     }
 
-    .about {
-        z-index:1;
-    }
-
-    .team {
-        z-index: 0;
-    }
-
     .nav__item {
         width: 100%;
     }
@@ -493,3 +486,27 @@ textarea {
     }
 }
 
+.about {
+    background-color: var(--white);
+}
+
+/* fix overlap */
+
+.home {
+    z-index:4;
+}
+
+.about {
+    z-index:3;
+}
+.team {
+    z-index:2;
+}
+
+.game {
+    z-index:1;
+}
+
+.contact {
+    z-index: 0;
+}
