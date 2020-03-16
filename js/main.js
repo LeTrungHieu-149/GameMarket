@@ -5,3 +5,4 @@ function openNav() {
 function closeNav() {
   document.getElementById("sub-nav").style.height = "0%";
 }
+

@@ -12,40 +12,40 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div id="home"></div>
-    <header class="header">
-        <nav class="nav">
-            <div class="menu-button" onclick="openNav()">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div class="nav__logo">
-                <a href="index.html" class="nav__img-link"><img alt="logo" class="nav__img" src="images/logo.png"></a>
-            </div>
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#aboutus" class="nav__link">About Us</a></li>
-                <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
-                <li class="nav__item"><a href="#game" class="nav__link">Game</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-            </ul>
-            <div class="sub-nav" id="sub-nav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <ul class="sub-nav__list">
-                    <li class="sub-nav__item"><a href="#home" class="sub-nav__link" onclick="closeNav()">Home</a></li>
-                    <li class="sub-nav__item"><a href="#aboutus" class="sub-nav__link" onclick="closeNav()">About Us</a></li>
-                    <li class="sub-nav__item"><a href="#team" class="sub-nav__link" onclick="closeNav()">Team</a></li>
-                    <li class="sub-nav__item"><a href="#game" class="sub-nav__link" onclick="closeNav()">Game</a></li>
-                    <li class="sub-nav__item"><a href="#contact" class="sub-nav__link" onclick="closeNav()">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+    <header class="header" id="header">
+        <div class="header__logo">
+            <a href="index.html" class="nav__img-link"><img alt="logo" class="nav__img" src="images/logo.png"></a>
+        </div>
+        <div class="menu-button" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </div>
     </header>
-    <div class="home">
+    <div id="clone-header"></div>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#header" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+            <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
+            <li class="nav__item"><a href="#game" class="nav__link">Game</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="sub-nav" id="sub-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="display: inline;">&times;</a>
+            <ul class="sub-nav__list">
+                <li class="sub-nav__item"><a href="#clone-header" class="sub-nav__link" onclick="closeNav()">Home</a></li>
+                <li class="sub-nav__item"><a href="#about" class="sub-nav__link" onclick="closeNav()">About Us</a></li>
+                <li class="sub-nav__item"><a href="#team" class="sub-nav__link" onclick="closeNav()">Team</a></li>
+                <li class="sub-nav__item"><a href="#game" class="sub-nav__link" onclick="closeNav()">Game</a></li>
+                <li class="sub-nav__item"><a href="#contact" class="sub-nav__link" onclick="closeNav()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="home" id="home">
         <div class="home__content">
             <button class="home__btn">Contact us</button>
         </div>
     </div>
-    <div class="about" id="aboutus">
+    <div class="about" id="about">
         <h2 class="heading">about us</h2>
         <div class="about__block">
             <div class="block-content">

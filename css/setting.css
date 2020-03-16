@@ -6,7 +6,7 @@
   --primary-font:"Roboto";
   --secondary-font:"sans-serif";
   --black: black;
-  --white-light:#f2f2f2;
+  --white-light:#cccccc;
 }
 *,
 *:before,
@@ -23,4 +23,9 @@ body {
 a {
   display: block;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

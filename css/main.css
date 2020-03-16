@@ -1,14 +1,30 @@
-/* nav */
-
 html {
     scroll-behavior: smooth;
 }
 
-.header {
+body {
+    margin:0 auto;
+}
+
+.header__logo {
+    text-align: center;
+    background-color: var(--black-bg);
+    display: block;
+}
+
+.about, .team, .game, .contact {
+    padding-top:5.4rem;
+    margin-top:-5.4rem;
+    padding-bottom:13rem;
+}
+
+/* nav */
+
+.nav {
     position: sticky;
-    top:-13.4rem;
-    z-index: 50;
-    width: 100%;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 100;
 }
 
 .nav__list {
@@ -16,14 +32,8 @@ html {
     text-align: center;
 }
 
-.nav__logo {
-    text-align: center;
-    background-color: var(--black-bg);
-    display: block;
-}
-
 .nav__img {
-    width:13.2rem;
+    width: 13.2rem;
     height: 13.2rem;
 }
 .nav__img-link {
@@ -52,29 +62,31 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
+    background-color: var(--black);
     overflow-y: hidden;
     transition: 0.5s;
-  }
+    z-index: 5;
+}
 
-  .sub-nav__list {
+.sub-nav__list {
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
-  }
+}
 
-  .sub-nav a {
-    padding: 8px;
+.sub-nav a {
+    padding: 0.8rem;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
+    font-size: 3.6rem;
+    color: var(--white-light);
     display: block;
     transition: 0.3s;
-  }
+}
 /* home */
 .home {
-    height: 80vh;
+    width: 100%;
+    height: 60rem;
     position: relative;
     background-image: url("../images/poster.jpg");
     background-repeat: no-repeat;
@@ -104,15 +116,15 @@ html {
 /* about */
 .about {
     position: relative;
-    padding: 0 5rem 10rem;
-    border-bottom: 1px solid black;
+    padding-left:3rem;
+    padding-right: 3rem;
 }
 
 .heading {
     font-size: 3.2rem;
     text-transform: uppercase;
     text-align: center;
-    padding: 6.5rem 2rem 4rem;
+    padding: 4rem 2rem;
 }
 
 .heading:after {
@@ -121,11 +133,11 @@ html {
     height: 0.3rem;
     background-color: var(--green-color);
     position: absolute;
-    top:11rem;
+    top:14rem;
     left:50%;
     transform: translate(-50%,-50%);
-
 }
+
 .about__block {
     display: flex;
     align-items: center;
@@ -152,7 +164,6 @@ html {
 .team {
     position: relative;
     background-color: var(--white-light);
-    border-bottom:1px solid black;
 }
 
 .team__block-member {
@@ -166,6 +177,12 @@ html {
     text-align: center;
     box-shadow: 0 0 1rem 0.5rem var(--green-color);
     margin:4rem;
+    background-color: var(--white);
+}
+
+.member:nth-child(2) {
+    margin-left:2rem;
+    margin-right:2rem;
 }
 
 .member__img {
@@ -208,7 +225,6 @@ html {
 
 .game {
     position: relative;
-    border-bottom: 1px solid black;
 }
 
 .games-block {
@@ -223,6 +239,7 @@ html {
     box-shadow: 0 0 1rem 0.5rem var(--green-color);
     padding: 2rem;
     justify-content: space-between;
+    background-color: var(--white-light);
 }
 
 .game-item__info {
@@ -262,7 +279,6 @@ html {
 .contact {
     position: relative;
     background-color: var(--white-light);
-    padding-bottom: 3rem;
 }
 
 .input-form {
@@ -272,6 +288,7 @@ html {
     margin:2rem auto 0;
     box-shadow: 0 0 1rem 0.5rem var(--green-color);
     padding:3rem;
+    background-color: var(--white);
 }
 
 .input-row {
@@ -335,7 +352,6 @@ textarea {
     border: 1px solid black;
 }
 
-
 /* responsive */
 
 @media only screen and (min-width: 768.1px) {
@@ -346,34 +362,50 @@ textarea {
 
 @media only screen and (max-width: 768px) {
 
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .about, .team, .game, .contact {
+        padding-top:6.2rem;
+        margin-top:-6.2rem;
+    }
+
     .header {
         position: fixed;
         top:0;
+        width: 100%;
+        z-index: 5;
     }
 
+    .header:after {
+        content:"";
+        display: table;
+        clear: both;
+    }
     .nav__list {
         display: none;
     }
 
     .nav__img {
-        width:9rem;
-        height:9rem;
+        width:6rem;
+        height:6rem;
     }
 
     .menu-button {
-        z-index:100;
+        z-index:10;
         color:var(--white);
         background-color: var(--green-color);
         position: fixed;
-        top:2rem;
-        right:2rem;
-        width:5rem;
-        height: 5rem;
-        font-size:3rem;
+        top:1.5rem;
+        right:1.5rem;
+        width:3rem;
+        height: 3rem;
+        font-size:2rem;
         border-radius:50%;
         cursor: pointer;
         text-align: center;
-        line-height: 5rem;
+        line-height: 3rem;
     }
 
     .menu-input:checked ~ .nav__list {
@@ -389,9 +421,6 @@ textarea {
         padding-bottom:1rem;
     }
 
-    .home {
-        height: 100vh;
-    }
     .home__content {
         bottom:2rem;
         left:50%;
@@ -402,10 +431,6 @@ textarea {
         width:15rem;
         padding-top:1rem;
         padding-bottom:1rem;
-    }
-
-    .about {
-        padding: 0;
     }
 
     .about__block {
@@ -422,6 +447,8 @@ textarea {
         height: 100%;
         padding-top:3rem;
     }
+
+    .team 
 
     .team__block-member {
         flex-direction: column;
