@@ -6,7 +6,9 @@
   --primary-font:"Roboto";
   --secondary-font:"sans-serif";
   --black: black;
-  --white-light:#cccccc;
+  --gray-light:#cccccc;
+  --light-blue: lightblue;
+
 }
 *,
 *:before,
@@ -25,7 +27,3 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
