@@ -258,10 +258,13 @@ body {
     padding: 2rem;
     justify-content: space-between;
     background-color: var(--gray-light);
+    align-items: center;
 }
 
 .game-item__info {
     width: 100%;
+    height: 40%;
+    overflow: hidden;
 }
 .game-item__img {
     height: 50%;
@@ -277,19 +280,20 @@ body {
 
 .game-item__text {
     font-size: 1.6rem;
-    padding:0 2rem 0rem;
+    padding:0 2rem 0;
     line-height: 2rem;
 }
 
 .download {
+    height: 10%;
     text-align: center;
     font-size:2rem;
     color:var(--black-bg);
     background-color: var(--green-color);
     width:20rem;
     padding:2rem;
-    margin:3rem auto 0;
     border: 1px solid var(--black);
+    margin-top:2rem;
 }
 
 /* contact */
@@ -385,6 +389,28 @@ textarea {
         margin-right:2rem;
     }
 
+}
+
+@media (min-width:768px) and (max-width:1012px) {
+    .game-item:first-child {
+        margin-right:2rem;
+    }
+
+    .game-item:last-child {
+        margin-left:2rem;
+    }
+
+    .game-item__img {
+        height: 40%;
+    }
+
+    .game-item__info {
+        height: 50%;
+    }
+
+    .game-item__name {
+        padding-bottom:2rem;
+    }
 }
 
 @media only screen and (min-width: 768.1px) {
